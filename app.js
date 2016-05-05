@@ -56,5 +56,8 @@ app.use(function(err, req, res, next) {
   });
 });
 
+var mongoose = require('mongoose');
 
+mongoose.connect('mongodb://localhost/blogdb');
+require('./models/Comments');
 module.exports = app;
