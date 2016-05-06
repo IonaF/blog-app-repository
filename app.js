@@ -1,3 +1,8 @@
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/test');
+var pinky = require('./models/Comments');
+console.log(pinky);
+
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -56,8 +61,5 @@ app.use(function(err, req, res, next) {
   });
 });
 
-var mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/blogdb');
-require('./models/Comments');
 module.exports = app;
