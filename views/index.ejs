@@ -15,14 +15,15 @@
 			<div ng-repeat="sign in zodiacSigns">
       <table>
 		<tr>
-			<td rowspan = "3"></td> 
+			<td rowspan = "4"><img ng-src="{{sign.pic}}"></img></td> 
 			<td><h4><i>{{sign.name}} - {{sign.meaning}}<i></h4></td>
 		</tr>
 		<tr>
 			<td>{{sign.duration}}</td>
 		</tr>
+		<tr height="5"></tr>
 		<tr>
-			<td>{{sign.description}}</td>
+			<td style="padding-left: 5px;">{{sign.description}}</td>
 		</tr>
 	  </table>
 	  <br/>
@@ -30,12 +31,12 @@
 	<div>	
 	<h4>Comments</h4>
 	<div class="row" ng-repeat="rec in comments">
-				<div class="col-xs-9">
-					{{rec.commentTxt}}
+				<div class="col-xs-7">
+					{{rec.commentText}}
 				</div>
-				<div class="col-xs-3">
-					<span>By: <span>{{rec.by}}<br/>
-					<span>On: <span>{{rec.on}}
+				<div class="col-xs-5" style="text-align:right;">
+					<span>By: <span>{{rec.commentBy}}<br/>
+					<span>On: <span>{{rec.commentOn}}
 				</div>
 				
 	</div>
